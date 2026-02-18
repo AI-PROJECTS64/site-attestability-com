@@ -1,0 +1,654 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Attestability.com — Evidence, Attestation Architecture & Trust by Evidence</title>
+  <meta name="description" content="Attestability.com — strategic descriptive .com domain for “attestability”: the capability of systems to produce verifiable evidence about their origin and state. Vendor-neutral reference hub aligned with CCC, NIST and IETF RATS." />
+
+  <!-- Canonical & hreflang -->
+  <link rel="canonical" href="https://www.attestability.com/" />
+  <link rel="alternate" href="https://www.attestability.com/" hreflang="fr" />
+  <link rel="alternate" href="https://www.attestability.com/" hreflang="en" />
+  <link rel="alternate" href="https://www.attestability.com/" hreflang="x-default" />
+  <meta name="robots" content="index,follow,max-image-preview:large">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Attestability.com — Evidence, Attestation Architecture & Trust by Evidence" />
+  <meta property="og:description" content="Descriptive .com domain for attestability: a neutral, board-level banner for evidence-first security, remote attestation architectures, and procurement-ready assurance." />
+  <meta property="og:url" content="https://www.attestability.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.attestability.com/og.jpg" />
+  <meta property="og:image:alt" content="Attestability.com — Evidence, Attestation Architecture & Trust by Evidence" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.attestability.com/og.jpg" />
+
+  <!-- Icons & preload -->
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" as="image" href="/logo-attestability.png" imagesizes="260px" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Attestability.com",
+    "url": "https://www.attestability.com/",
+    "inLanguage": ["fr-FR","en-GB","en-US"],
+    "description": "Strategic naming asset for attestability: a neutral banner for evidence-first assurance, remote attestation architectures and procurement-ready trust frameworks.",
+    "sameAs": ["https://www.linkedin.com/company/attestability"],
+    "potentialAction": {
+      "@type": "CommunicateAction",
+      "target": "mailto:contact@attestability.com"
+    }
+  }
+  </script>
+
+  <!-- Styles (identiques aux autres sites) -->
+  <style>
+    :root{
+      --bg:#020815;
+      --card:#081120;
+      --muted:#8791b0;
+      --text:#e8eefc;
+      --accent:#7fd0ff;
+      --chip:#101b34;
+      --shadow:0 10px 30px rgba(0,0,0,.45);
+      --radius:18px
+    }
+    *{box-sizing:border-box}
+    html,body{
+      margin:0;
+      padding:0;
+      background:var(--bg);
+      color:var(--text);
+      font:15px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Ubuntu,Arial,sans-serif
+    }
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1040px;margin:0 auto;padding:28px}
+    .topbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin:8px 0 22px
+    }
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background:var(--chip);
+      border:1px solid #1d2946;
+      border-radius:999px;
+      padding:6px 12px;
+      color:#c1ccec;
+      font-size:13px
+    }
+    .badge-dot{
+      width:8px;
+      height:8px;
+      border-radius:999px;
+      background:radial-gradient(circle,#4ade80 0,#16a34a 55%,#052e16 100%);
+      box-shadow:0 0 0 6px rgba(34,197,94,.25);
+   ink: 0;
+    }
+    .lang{
+      gap:10px;
+      display:flex;
+      align-items:center
+    }
+    .lang button{
+      background:var(--chip);
+      color:var(--text);
+      border:1px solid #1d2946;
+      padding:7px 12px;
+      border-radius:999px;
+      cursor:pointer;
+      font-size:13px;
+    }
+    .lang button[aria-pressed="true"]{
+      background:var(--accent);
+      color:#020815;
+      border-color:transparent
+    }
+    .card{
+      background:var(--card);
+      border:1px solid #1d2946;
+      border-radius:var(--radius);
+      padding:26px;
+      box-shadow:var(--shadow)
+    }
+    .hero h1{
+      margin:0 0 8px;
+      font-size:44px;
+      letter-spacing:.4px
+    }
+    .cta{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin:18px 0 6px
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background:#122143;
+      color:#fff;
+      border:1px solid #21325b;
+      padding:11px 16px;
+      border-radius:999px;
+      cursor:pointer;
+      text-decoration:none;
+      font-size:14px
+    }
+    .btn.primary{
+      background:var(--accent);
+      color:#020815;
+      border-color:transparent
+    }
+
+    /* Bouton Concept Note — identique à BCIaccess */
+    .btn.concept-note{
+      background:transparent;
+      border-radius:999px;
+      border:1px solid rgba(127,208,255,.9);
+      box-shadow:0 0 0 1px rgba(15,23,42,.9);
+      color:var(--accent);
+      padding:10px 18px;
+    }
+    .btn.concept-note:hover{
+      text-decoration:none;
+      box-shadow:0 0 0 1px rgba(148,197,255,1),0 0 18px rgba(56,189,248,.25);
+    }
+    .btn.concept-note .cn-icon{
+      width:14px;
+      height:14px;
+      border-radius:4px;
+      background:linear-gradient(135deg,#7fd0ff,#38bdf8);
+      box-shadow:0 0 0 1px rgba(15,23,42,.8);
+      flex-shrink:0;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(12,1fr);
+      gap:18px
+    }
+    .col-6{grid-column:span 6}
+    .col-12{grid-column:span 12}
+    .chip{
+      display:inline-block;
+      background:var(--chip);
+      border:1px solid #1d2946;
+      border-radius:999px;
+      padding:6px 10px;
+      font-size:13px;
+      color:#c1ccec
+    }
+    .list{
+      display:grid;
+      gap:10px;
+      margin:8px 0
+    }
+    .muted{color:var(--muted)}
+    .foot{opacity:.8;font-size:13px;margin-top:24px}
+    img.logo{
+      max-width:260px;
+      height:auto;
+      display:block;
+      margin:10px 0 10px;
+      opacity:.97;
+      border-radius:14px
+    }
+    @media (max-width:860px){
+      .col-6{grid-column:span 12}
+      .hero h1{font-size:34px}
+    }
+    .ico{width:16px;height:16px;display:inline-block;vertical-align:middle}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="badge">
+        <span class="badge-dot"></span>
+        <span>Strategic digital asset available for acquisition</span>
+      </div>
+      <div class="lang">
+        <button id="btn-fr" aria-pressed="false">FR</button>
+        <button id="btn-en" aria-pressed="true">EN</button>
+      </div>
+    </div>
+
+    <!-- =============== HERO FR =============== -->
+    <section class="card hero" data-fr hidden>
+      <h1>Attestability.com</h1>
+      <img class="logo" src="/logo-attestability.png" alt="Attestability.com" loading="eager">
+
+      <p class="muted">
+        <b>Nom de domaine descriptif .com</b> pour la notion <b>« attestability »</b> :
+        la <b>capacité d’un système à produire des preuves vérifiables</b> concernant son
+        <b>origine</b> et son <b>état</b> (identité, intégrité, mesures, contexte), dans une logique
+        <b>evidence-first</b> compatible avec les architectures d’attestation et les exigences de
+        procurement.
+        <br>
+        À distinguer : <b>attestation</b> = l’acte / le protocole ; <b>attestability</b> = la propriété
+        (la capacité) qui rend l’attestation possible, utile et maintenable dans le temps.
+        <br>
+        Conçu comme <b>bannière neutre</b> pour un hub de référence (définitions, vocabulaire,
+        architecture canonique, bibliographie), sans promesse de conformité et sans services régulés.
+        <br>
+        <b>Offres sérieuses uniquement</b> (plateformes cloud, sécurité, semi-conducteurs/TEE, grandes entreprises,
+        secteurs régulés, cabinets d’assurance/audit, assureurs, agences et programmes publics).
+      </p>
+
+      <div class="cta">
+        <a class="btn primary" href="mailto:contact@attestability.com?subject=Attestability.com%20-%20NDA%20%2F%20Offer">
+          Contacter : contact@attestability.com
+        </a>
+
+        <a class="btn concept-note" href="/concept-note.html">
+          <span class="cn-icon"></span>
+          Lire la Concept Note
+        </a>
+
+        <a class="btn" href="#value-fr">Pourquoi “Attestability” ?</a>
+
+        <a class="btn" href="https://www.linkedin.com/company/attestability" target="_blank" rel="noopener">
+          <svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5H4.5V24H.5V8.5zM8.5 8.5H12.3V10.6h.05c.53-1 1.84-2.06 3.78-2.06 4.04 0 4.79 2.66 4.79 6.12V24h-4V15.8c0-1.96-.03-4.48-2.73-4.48-2.73 0-3.15 2.13-3.15 4.34V24h-4V8.5z"/>
+          </svg>
+          LinkedIn
+        </a>
+      </div>
+
+      <div class="pill-row">
+        <span class="pill">Trust by evidence</span>
+        <span class="pill">Remote attestation</span>
+        <span class="pill">IETF RATS</span>
+        <span class="pill">Confidential computing</span>
+        <span class="pill">Supply chain evidence</span>
+        <span class="pill">Non-human identity</span>
+        <span class="pill">Post-quantum agility</span>
+      </div>
+    </section>
+
+    <!-- =============== HERO EN =============== -->
+    <section class="card hero" data-en>
+      <h1>Attestability.com</h1>
+      <img class="logo" src="/logo-attestability.png" alt="Attestability.com" loading="eager">
+
+      <p class="muted">
+        <b>Descriptive .com domain</b> for <b>“attestability”</b>:
+        the <b>capability of a system to produce verifiable evidence</b> about its <b>origin</b> and <b>state</b>
+        (identity, integrity, measurements, context), in an <b>evidence-first</b> framing that is compatible
+        with attestation architectures and procurement-grade assurance.
+        <br>
+        Key distinction: <b>attestation</b> is the act/protocol; <b>attestability</b> is the property (capability)
+        that makes attestation meaningful, maintainable, and auditable over time.
+        <br>
+        Designed as a <b>vendor-neutral reference hub</b> (definitions, canonical vocabulary, reference architecture,
+        primary sources), with no compliance promises and no regulated services.
+        <br>
+        <b>Serious offers only</b> (cloud platforms, security, semiconductor/TEE actors, regulated industries,
+        audit/assurance firms, insurers, public agencies and strategic programs).
+      </p>
+
+      <div class="cta">
+        <a class="btn primary" href="mailto:contact@attestability.com?subject=Attestability.com%20-%20NDA%20%2F%20Offer">
+          Direct contact: contact@attestability.com
+        </a>
+
+        <a class="btn concept-note" href="/concept-note.html">
+          <span class="cn-icon"></span>
+          Read the Concept Note
+        </a>
+
+        <a class="btn" href="#value-en">Why “Attestability”?</a>
+
+        <a class="btn" href="https://www.linkedin.com/company/attestability" target="_blank" rel="noopener">
+          <svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5H4.5V24H.5V8.5zM8.5 8.5H12.3V10.6h.05c.53-1 1.84-2.06 3.78-2.06 4.04 0 4.79 2.66 4.79 6.12V24h-4V15.8c0-1.96-.03-4.48-2.73-4.48-2.73 0-3.15 2.13-3.15 4.34V24h-4V8.5z"/>
+          </svg>
+          LinkedIn
+        </a>
+      </div>
+
+      <div class="pill-row">
+        <span class="pill">Trust by evidence</span>
+        <span class="pill">Remote attestation</span>
+        <span class="pill">IETF RATS</span>
+        <span class="pill">Confidential computing</span>
+        <span class="pill">Supply chain evidence</span>
+        <span class="pill">Non-human identity</span>
+        <span class="pill">Post-quantum agility</span>
+      </div>
+    </section>
+
+    <!-- =============== VALUE / FR =============== -->
+    <section class="card" id="value-fr" style="margin-top:16px" data-fr hidden>
+      <h3>Définition et périmètre</h3>
+      <p class="muted">
+        <b>Attestability</b> désigne une <b>capacité d’infrastructure</b> : la possibilité, pour un système,
+        de produire des <b>preuves vérifiables</b> que des parties tierces (verifiers, relying parties,
+        auditeurs, procurement) peuvent évaluer selon une politique d’appréciation.
+      </p>
+
+      <div class="grid" style="margin-top:14px">
+        <div class="col-6">
+          <span class="chip">Ce que le domaine peut ancrer</span>
+          <div class="list">
+            <div>• Un <b>hub de référence neutre</b> (définitions, glossaire, sources primaires).</div>
+            <div>• Une <b>carte mentale stable</b> : propriété (attestability) vs acte (attestation).</div>
+            <div>• Une <b>architecture canonique</b> (Attester / Verifier / Relying Party).</div>
+            <div>• Un langage “board + procurement” pour <b>assurance</b>, <b>preuve</b>, <b>responsabilité</b>.</div>
+            <div>• Un point d’entrée trans-domaines : <b>TEE</b>, supply chain, agents/workloads, PQC.</div>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <span class="chip">Ce que le domaine n’est pas</span>
+          <div class="list">
+            <div>• Pas une certification, pas un audit, pas un organisme de conformité.</div>
+            <div>• Pas une autorité de notation, pas un régulateur, pas un standard body.</div>
+            <div>• Pas un produit, pas un service managé, pas un conseil juridique.</div>
+            <div>• Aucune promesse de “compliance” ou d’approbation.</div>
+            <div>• L’actif proposé est <b>uniquement le nom de domaine</b> Attestability.com.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== VALUE / EN =============== -->
+    <section class="card" id="value-en" style="margin-top:16px" data-en>
+      <h3>Definition and scope</h3>
+      <p class="muted">
+        <b>Attestability</b> is an <b>infrastructure capability</b>: the ability for a system to produce
+        <b>verifiable evidence</b> that third parties (verifiers, relying parties, auditors, procurement)
+        can evaluate under an appraisal policy.
+      </p>
+
+      <div class="grid" style="margin-top:14px">
+        <div class="col-6">
+          <span class="chip">What the domain can anchor</span>
+          <div class="list">
+            <div>• A <b>vendor-neutral reference hub</b> (definitions, glossary, primary sources).</div>
+            <div>• A <b>stable mental model</b>: property (attestability) vs act (attestation).</div>
+            <div>• A <b>canonical architecture</b> (Attester / Verifier / Relying Party).</div>
+            <div>• A board- and procurement-grade language for <b>assurance</b>, <b>evidence</b>, <b>liability</b>.</div>
+            <div>• A cross-domain entry point: <b>TEE</b>, supply chain, agents/workloads, PQC.</div>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <span class="chip">What it is not</span>
+          <div class="list">
+            <div>• Not a certification, not an audit service, not a compliance body.</div>
+            <div>• Not a rating agency, not a regulator, not a standards organization.</div>
+            <div>• Not a product, not a managed service, not legal advice.</div>
+            <div>• No promise of “compliance” or approval.</div>
+            <div>• The offered asset is <b>only the domain name</b> Attestability.com.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== USE CASES / FR =============== -->
+    <section class="card" style="margin-top:16px" data-fr hidden>
+      <h3>Où “attestability” s’applique (4 domaines)</h3>
+      <div class="grid" style="margin-top:10px">
+        <div class="col-6">
+          <span class="chip">1) Confidential computing (données “in use”)</span>
+          <p class="muted">
+            TEE/TPM et environnements de confiance : preuves d’exécution, d’identité et d’intégrité.
+          </p>
+        </div>
+        <div class="col-6">
+          <span class="chip">2) Chaîne logicielle (supply chain)</span>
+          <p class="muted">
+            Preuves de build, provenance, artefacts signés et attestations demandées par procurement.
+          </p>
+        </div>
+        <div class="col-6">
+          <span class="chip">3) Identités machines et agents</span>
+          <p class="muted">
+            Workloads, agents, identités non-humaines : preuves “who/what is running, where, under which guarantees”.
+          </p>
+        </div>
+        <div class="col-6">
+          <span class="chip">4) Longévité des preuves (PQC)</span>
+          <p class="muted">
+            Crypto-agilité et horizon de conservation des preuves face à la transition post-quantique.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== USE CASES / EN =============== -->
+    <section class="card" style="margin-top:16px" data-en>
+      <h3>Where “attestability” applies (4 domains)</h3>
+      <div class="grid" style="margin-top:10px">
+        <div class="col-6">
+          <span class="chip">1) Confidential computing (data-in-use)</span>
+          <p class="muted">
+            TEE/TPM and trusted execution: evidence about runtime, identity and integrity.
+          </p>
+        </div>
+        <div class="col-6">
+          <span class="chip">2) Software supply chain</span>
+          <p class="muted">
+            Build evidence, provenance, signed artifacts, and procurement-grade attestations.
+          </p>
+        </div>
+        <div class="col-6">
+          <span class="chip">3) Machine identity and agents</span>
+          <p class="muted">
+            Workloads and non-human identities: “who/what is running, where, under which guarantees”.
+          </p>
+        </div>
+        <div class="col-6">
+          <span class="chip">4) Evidence longevity (PQC)</span>
+          <p class="muted">
+            Crypto-agility and retention horizons for long-lived evidence under the post-quantum transition.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== REFERENCE ARCH / FR =============== -->
+    <section class="card" style="margin-top:16px" data-fr hidden>
+      <h3>Modèle minimal (RATS en 20 secondes)</h3>
+      <p class="muted">
+        Une architecture d’attestation “remote” peut être expliquée avec 3 rôles :
+        <b>Attester</b> (produit la preuve), <b>Verifier</b> (évalue la preuve), <b>Relying Party</b> (utilise le résultat).
+        Cette grammaire est essentielle pour rendre “attestability” lisible côté board, audit et procurement.
+      </p>
+      <div class="pill-row">
+        <span class="pill">Attester</span>
+        <span class="pill">Evidence</span>
+        <span class="pill">Verifier</span>
+        <span class="pill">Appraisal Policy</span>
+        <span class="pill">Relying Party</span>
+      </div>
+    </section>
+
+    <!-- =============== REFERENCE ARCH / EN =============== -->
+    <section class="card" style="margin-top:16px" data-en>
+      <h3>Minimal model (RATS in 20 seconds)</h3>
+      <p class="muted">
+        A remote attestation architecture can be explained with 3 roles:
+        <b>Attester</b> (produces evidence), <b>Verifier</b> (evaluates evidence), <b>Relying Party</b> (uses the result).
+        This grammar is key to make “attestability” readable for boards, auditors and procurement.
+      </p>
+      <div class="pill-row">
+        <span class="pill">Attester</span>
+        <span class="pill">Evidence</span>
+        <span class="pill">Verifier</span>
+        <span class="pill">Appraisal Policy</span>
+        <span class="pill">Relying Party</span>
+      </div>
+    </section>
+
+    <!-- =============== PRIMARY SOURCES / FR =============== -->
+    <section class="card" style="margin-top:16px" data-fr hidden>
+      <h3>Sources primaires (références)</h3>
+      <p class="muted">
+        Ce site est un hub neutre basé sur des sources publiques et vérifiables.
+      </p>
+      <ul>
+        <li><a href="https://confidentialcomputing.io/wp-content/uploads/sites/10/2023/03/Common-Terminology-for-Confidential-Computing.pdf" target="_blank" rel="noopener">Confidential Computing Consortium – Common Terminology for Confidential Computing (PDF)</a></li>
+        <li><a href="https://nvlpubs.nist.gov/nistpubs/ir/2023/NIST.IR.8320D.ipd.pdf" target="_blank" rel="noopener">NIST IR 8320D – Hardware-Based Confidential Computing (PDF)</a></li>
+        <li><a href="https://datatracker.ietf.org/doc/rfc9334/" target="_blank" rel="noopener">IETF RFC 9334 – RATS Architecture</a></li>
+        <li><a href="https://www.cisa.gov/secure-software-attestation-form" target="_blank" rel="noopener">CISA – Secure Software Development Attestation Form</a></li>
+        <li><a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener">European Commission – AI Act policy page</a></li>
+        <li><a href="https://digital-strategy.ec.europa.eu/en/policies/cra-summary" target="_blank" rel="noopener">European Commission – Cyber Resilience Act (summary)</a></li>
+        <li><a href="https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards" target="_blank" rel="noopener">NIST – Post-Quantum Cryptography standards announcement</a></li>
+      </ul>
+    </section>
+
+    <!-- =============== PRIMARY SOURCES / EN =============== -->
+    <section class="card" style="margin-top:16px" data-en>
+      <h3>Primary sources (references)</h3>
+      <p class="muted">
+        This site is a neutral reference hub grounded in public, verifiable sources.
+      </p>
+      <ul>
+        <li><a href="https://confidentialcomputing.io/wp-content/uploads/sites/10/2023/03/Common-Terminology-for-Confidential-Computing.pdf" target="_blank" rel="noopener">Confidential Computing Consortium – Common Terminology for Confidential Computing (PDF)</a></li>
+        <li><a href="https://nvlpubs.nist.gov/nistpubs/ir/2023/NIST.IR.8320D.ipd.pdf" target="_blank" rel="noopener">NIST IR 8320D – Hardware-Based Confidential Computing (PDF)</a></li>
+        <li><a href="https://datatracker.ietf.org/doc/rfc9334/" target="_blank" rel="noopener">IETF RFC 9334 – RATS Architecture</a></li>
+        <li><a href="https://www.cisa.gov/secure-software-attestation-form" target="_blank" rel="noopener">CISA – Secure Software Development Attestation Form</a></li>
+        <li><a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener">European Commission – AI Act policy page</a></li>
+        <li><a href="https://digital-strategy.ec.europa.eu/en/policies/cra-summary" target="_blank" rel="noopener">European Commission – Cyber Resilience Act (summary)</a></li>
+        <li><a href="https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards" target="_blank" rel="noopener">NIST – Post-Quantum Cryptography standards announcement</a></li>
+      </ul>
+    </section>
+
+    <!-- =============== RELATED ASSETS / FR =============== -->
+    <section class="card" style="margin-top:16px" data-fr hidden>
+      <h3>Actifs de catégorie liés (optionnels)</h3>
+      <p class="muted">
+        Liens sobres, uniquement si utile pour contextualiser la chaîne d’évidence.
+      </p>
+      <ul>
+        <li><a href="https://www.aiassurancecase.com" target="_blank" rel="noopener">AIAssuranceCase.com</a> (assurance case, claims/arguments/evidence)</li>
+        <li><a href="https://www.signedresponse.com" target="_blank" rel="noopener">SignedResponse.com</a> (preuves, artefacts signés, chaîne d’évidence)</li>
+        <li><a href="https://www.computeintegrity.com" target="_blank" rel="noopener">ComputeIntegrity.com</a> (intégrité des preuves et de l’exécution)</li>
+      </ul>
+    </section>
+
+    <!-- =============== RELATED ASSETS / EN =============== -->
+    <section class="card" style="margin-top:16px" data-en>
+      <h3>Related category assets (optional)</h3>
+      <p class="muted">
+        Minimal links, only where they strengthen evidence-chain coherence.
+      </p>
+      <ul>
+        <li><a href="https://www.aiassurancecase.com" target="_blank" rel="noopener">AIAssuranceCase.com</a> (assurance cases: claims/arguments/evidence)</li>
+        <li><a href="https://www.signedresponse.com" target="_blank" rel="noopener">SignedResponse.com</a> (signed artifacts and evidence-chain framing)</li>
+        <li><a href="https://www.computeintegrity.com" target="_blank" rel="noopener">ComputeIntegrity.com</a> (integrity of execution and evidence)</li>
+      </ul>
+    </section>
+
+    <!-- =============== ACQUISITION / FR =============== -->
+    <section class="card" style="margin-top:16px" data-fr hidden>
+      <h3>Process d’acquisition (sécurisé)</h3>
+      <p class="muted">
+        Étapes possibles : premier échange (périmètre + légitimité) → NDA si nécessaire →
+        clarification d’usage (scope, gouvernance, articulation avec d’autres actifs) → offre formelle →
+        transaction sous escrow → transfert du domaine chez le registrar de l’acquéreur.
+        <br>
+        L’actif transféré est uniquement le <b>nom de domaine Attestability.com</b> :
+        aucune infrastructure, aucun dataset, aucun logiciel, aucun service régulé.
+      </p>
+      <a class="btn primary" href="mailto:contact@attestability.com?subject=Attestability.com%20-%20NDA%20%2F%20Offer">
+        Contact direct : contact@attestability.com
+      </a>
+    </section>
+
+    <!-- =============== ACQUISITION / EN =============== -->
+    <section class="card" style="margin-top:16px" data-en>
+      <h3>Acquisition process (secure)</h3>
+      <p class="muted">
+        Typical steps: initial discussion (scope + legitimacy) → NDA if needed →
+        clarification of intended use (scope, governance, links with other assets) → formal offer →
+        escrow-based transaction → transfer of the domain to the buyer’s registrar.
+        <br>
+        The only asset transferred is the <b>Attestability.com</b> domain name:
+        no infrastructure, no datasets, no software, no regulated services.
+      </p>
+      <a class="btn primary" href="mailto:contact@attestability.com?subject=Attestability.com%20-%20NDA%20%2F%20Offer">
+        Direct contact: contact@attestability.com
+      </a>
+    </section>
+
+    <!-- =============== DOCS FR =============== -->
+    <section class="card" style="margin-top:16px" data-fr hidden>
+      <h3>Documents / Briefs</h3>
+      <p class="muted">
+        Brief d’acquisition détaillé Attestability.com (2025-11) disponible en français.
+        Document conçu pour CISO, plateformes, assurance, audit, procurement et programmes publics.
+      </p>
+      <div class="cta">
+        <a class="btn" href="/Acquisition%20Brief%20attestability-202511.pdf" target="_blank" rel="noopener" type="application/pdf">
+          👁️ Ouvrir le Brief (FR)
+        </a>
+        <a class="btn primary" href="/Acquisition%20Brief%20attestability-202511.pdf" download="Acquisition-Brief-attestability-202511.pdf" type="application/pdf">
+          📥 Télécharger (FR, PDF)
+        </a>
+      </div>
+    </section>
+
+    <!-- =============== DOCS EN =============== -->
+    <section class="card" style="margin-top:16px" data-en>
+      <h3>Documents / Briefs</h3>
+      <p class="muted">
+        Detailed Attestability.com acquisition brief (2025-11) available in English
+        (and in French via the FR section) for CISO teams, cloud/security platforms,
+        assurance/audit, procurement and public programs.
+      </p>
+      <div class="cta">
+        <a class="btn" href="/Acquisition%20Brief%20attestability-EN-202511.pdf" target="_blank" rel="noopener" type="application/pdf">
+          👁️ Open Brief (EN)
+        </a>
+        <a class="btn primary" href="/Acquisition%20Brief%20attestability-EN-202511.pdf" download="Acquisition-Brief-attestability-EN-202511.pdf" type="application/pdf">
+          📥 Download (EN, PDF)
+        </a>
+      </div>
+    </section>
+
+    <p class="foot muted">
+      © Attestability.com - descriptive strategic digital asset “attestability”.
+      No affiliation with public authorities, regulators, cloud or chip vendors, companies
+      or rating agencies. Descriptive use only. No legal, financial, investment, scientific
+      or tax advice. - Contact:
+      <a href="mailto:contact@attestability.com">contact@attestability.com</a>
+    </p>
+  </div>
+
+  <script>
+    const frBtn = document.getElementById('btn-fr');
+    const enBtn = document.getElementById('btn-en');
+
+    function show(lang){
+      document.querySelectorAll('[data-fr]').forEach(n => n.hidden = (lang !== 'fr'));
+      document.querySelectorAll('[data-en]').forEach(n => n.hidden = (lang !== 'en'));
+
+      frBtn.setAttribute('aria-pressed', String(lang === 'fr'));
+      enBtn.setAttribute('aria-pressed', String(lang === 'en'));
+
+      document.documentElement.lang = (lang === 'fr') ? 'fr' : 'en';
+    }
+
+    frBtn.addEventListener('click', () => show('fr'));
+    enBtn.addEventListener('click', () => show('en'));
+
+    // .com : EN par défaut, FR seulement sur clic
+    show('en');
+  </script>
+</body>
+</html>
