@@ -1,0 +1,577 @@
+<!-- concept-note.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Concept Note – Attestability.com</title>
+
+  <meta name="description" content="Concept Note for Attestability.com – strategic descriptive .com domain for attestability: the capability of systems to produce verifiable evidence about their origin and state. Vendor-neutral reference hub aligned with CCC, NIST and IETF RATS." />
+
+  <link rel="canonical" href="https://www.attestability.com/concept-note.html" />
+  <meta name="robots" content="index,follow,max-image-preview:large">
+
+  <meta property="og:title" content="Concept Note – Attestability.com" />
+  <meta property="og:description" content="How Attestability.com can serve as a neutral, board-level banner for evidence-first trust: remote attestation architectures, assurance vocabulary, and procurement-ready frameworks." />
+  <meta property="og:url" content="https://www.attestability.com/concept-note.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://www.attestability.com/og.jpg" />
+  <meta property="og:image:alt" content="Attestability.com — Evidence, Attestation Architecture & Trust by Evidence" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.attestability.com/og.jpg" />
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <style>
+    :root{
+      --bg:#020815;
+      --card:#081120;
+      --muted:#8791b0;
+      --text:#e8eefc;
+      --accent:#7fd0ff;
+      --chip:#101b34;
+      --shadow:0 10px 30px rgba(0,0,0,.45);
+      --radius:18px
+    }
+    *{box-sizing:border-box}
+    html,body{
+      margin:0;
+      padding:0;
+      background:var(--bg);
+      color:var(--text);
+      font:15px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Ubuntu,Arial,sans-serif
+    }
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:900px;margin:0 auto;padding:28px 20px 40px}
+    .topbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:20px
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:600;
+      letter-spacing:.3px;
+    }
+    .brand img{
+      width:32px;
+      height:32px;
+      border-radius:10px;
+    }
+    .actions{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+    .back-link{
+      font-size:13px;
+      opacity:.9;
+      white-space:nowrap;
+    }
+    .back-link span{margin-right:4px}
+
+    /* Lang buttons (same logic as index) */
+    .lang{
+      gap:10px;
+      display:flex;
+      align-items:center
+    }
+    .lang button{
+      background:var(--chip);
+      color:var(--text);
+      border:1px solid #1d2946;
+      padding:7px 12px;
+      border-radius:999px;
+      cursor:pointer;
+      font-size:13px;
+    }
+    .lang button[aria-pressed="true"]{
+      background:var(--accent);
+      color:#020815;
+      border-color:transparent
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid #1d2946;
+      border-radius:var(--radius);
+      padding:24px 22px;
+      box-shadow:var(--shadow);
+      margin-bottom:16px;
+    }
+    h1{
+      margin:0 0 6px;
+      font-size:30px;
+      letter-spacing:.4px;
+    }
+    h2{
+      margin:18px 0 8px;
+      font-size:19px;
+    }
+    h3{
+      margin:14px 0 6px;
+      font-size:16px;
+    }
+    .muted{color:var(--muted)}
+    .tagline{
+      font-size:14px;
+      color:var(--muted);
+      margin:0 0 6px;
+    }
+    .pill-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin:8px 0 0;
+    }
+    .pill{
+      background:var(--chip);
+      border-radius:999px;
+      padding:4px 10px;
+      font-size:12px;
+      border:1px solid #1d2946;
+      color:#c1ccec;
+    }
+    ul{
+      padding-left:18px;
+      margin:6px 0 10px;
+    }
+    li{margin-bottom:4px}
+    .footnote{
+      font-size:12px;
+      color:var(--muted);
+      margin-top:6px;
+    }
+    .section-label{
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      color:#9ca6c9;
+      margin-bottom:4px;
+    }
+    @media (max-width:700px){
+      .topbar{flex-direction:column;align-items:flex-start;gap:10px}
+      .actions{width:100%;justify-content:space-between}
+      .wrap{padding:22px 16px 32px}
+      h1{font-size:24px}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand">
+        <img src="/logo-attestability.png" alt="Attestability.com logo" loading="lazy">
+        <span>Attestability.com</span>
+      </div>
+
+      <div class="actions">
+        <a class="back-link" href="/" aria-label="Back to homepage"><span>←</span> Back to main page</a>
+        <div class="lang" aria-label="Language selector">
+          <button id="btn-fr" aria-pressed="false">FR</button>
+          <button id="btn-en" aria-pressed="true">EN</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- =================== INTRO EN =================== -->
+    <article class="card" data-en>
+      <div class="section-label">Concept Note</div>
+      <h1>Attestability.com</h1>
+      <p class="tagline">
+        Descriptive .com domain for “attestability” - a neutral banner for evidence-first trust:
+        verifiable system evidence, remote attestation architectures, and procurement-ready assurance.
+      </p>
+      <p class="muted">
+        This note outlines how <b>Attestability.com</b> can be used as a strategic naming asset by
+        cloud platforms, security and infrastructure teams, regulated industries, audit/assurance firms,
+        insurers, and public programs. It is <b>not</b> a policy document, standard or binding framework,
+        but a <b>vendor-neutral reference and language tool</b>.
+      </p>
+
+      <div class="pill-row">
+        <span class="pill">Attestability (capability)</span>
+        <span class="pill">Attestation (act)</span>
+        <span class="pill">Evidence-first</span>
+        <span class="pill">IETF RATS</span>
+        <span class="pill">Confidential computing</span>
+        <span class="pill">Supply chain evidence</span>
+        <span class="pill">Post-quantum agility</span>
+      </div>
+    </article>
+
+    <!-- =================== INTRO FR =================== -->
+    <article class="card" data-fr hidden>
+      <div class="section-label">Concept Note</div>
+      <h1>Attestability.com</h1>
+      <p class="tagline">
+        Nom de domaine descriptif .com pour “attestability” - bannière neutre “trust by evidence” :
+        preuves vérifiables, architectures d’attestation, assurance compatible procurement.
+      </p>
+      <p class="muted">
+        Cette note décrit comment <b>Attestability.com</b> peut servir d’actif de nommage stratégique
+        pour plateformes cloud, sécurité et infrastructure, secteurs régulés, cabinets d’assurance/audit,
+        assureurs et programmes publics. Ce document <b>n’est pas</b> un standard ni un cadre contraignant,
+        mais un <b>outil neutre de langage et de référence</b>.
+      </p>
+
+      <div class="pill-row">
+        <span class="pill">Attestability (capacité)</span>
+        <span class="pill">Attestation (acte)</span>
+        <span class="pill">Evidence-first</span>
+        <span class="pill">IETF RATS</span>
+        <span class="pill">Confidential computing</span>
+        <span class="pill">Supply chain evidence</span>
+        <span class="pill">Post-quantum agility</span>
+      </div>
+    </article>
+
+    <!-- =================== 1. PROBLEM EN =================== -->
+    <section class="card" data-en>
+      <div class="section-label">1. Problem framing</div>
+      <h2>Why “attestability” now?</h2>
+      <p>
+        Modern systems increasingly operate across <b>multi-cloud</b>, <b>distributed supply chains</b>,
+        <b>autonomous workloads</b>, and <b>data-in-use</b> environments. In this context, “trust by policy”
+        is often insufficient; organizations need <b>trust by evidence</b>.
+      </p>
+      <p>
+        “Attestability” names the <b>capability layer</b> that makes evidence feasible and dependable:
+        systems must be able to produce verifiable statements about <b>what they are</b>, <b>what is running</b>,
+        <b>how it was built</b>, and <b>under which guarantees</b>, so that verifiers and relying parties can
+        make risk and procurement decisions.
+      </p>
+      <ul>
+        <li><b>Assurance and liability</b> increasingly depend on explicit evidence, not narratives.</li>
+        <li><b>Procurement</b> asks for attestations and standardized proof artifacts.</li>
+        <li><b>Long-lived evidence</b> requires crypto-agility, including the post-quantum transition.</li>
+      </ul>
+      <p class="muted">
+        This is a language gap as much as a technical one: “attestability” provides a stable umbrella
+        for evidence-first strategies across multiple domains.
+      </p>
+    </section>
+
+    <!-- =================== 1. PROBLEM FR =================== -->
+    <section class="card" data-fr hidden>
+      <div class="section-label">1. Cadrage du problème</div>
+      <h2>Pourquoi “attestability” maintenant ?</h2>
+      <p>
+        Les systèmes modernes opèrent de plus en plus en <b>multi-cloud</b>, via des <b>chaînes logicielles</b>
+        distribuées, des <b>workloads autonomes</b>, et des environnements “<b>data-in-use</b>”.
+        Dans ce contexte, la “confiance par politique” ne suffit plus ; il faut de la <b>confiance par preuve</b>.
+      </p>
+      <p>
+        “Attestability” désigne la <b>couche de capacité</b> qui rend la preuve possible et robuste :
+        un système doit pouvoir produire des affirmations vérifiables sur <b>son identité</b>, <b>son exécution</b>,
+        <b>sa provenance</b> et <b>ses garanties</b>, afin que verifiers et relying parties puissent décider
+        (risque, assurance, procurement).
+      </p>
+      <ul>
+        <li><b>Assurance et responsabilité</b> reposent de plus en plus sur des preuves explicites.</li>
+        <li><b>Le procurement</b> demande des attestations et des artefacts de preuve standardisés.</li>
+        <li><b>Les preuves longues</b> exigent de la crypto-agilité, y compris face au post-quantique.</li>
+      </ul>
+      <p class="muted">
+        C’est un manque de langage autant qu’un sujet technique : “attestability” fournit une bannière stable
+        pour des stratégies “evidence-first” trans-domaines.
+      </p>
+    </section>
+
+    <!-- =================== 2. DEFINITIONS EN =================== -->
+    <section class="card" data-en>
+      <div class="section-label">2. Definition and scope</div>
+      <h2>Attestability vs Attestation</h2>
+      <p>
+        <b>Attestation</b> is the <b>act</b> (or protocol) of producing evidence about a system.
+        <b>Attestability</b> is the <b>capability</b> of the system (and its surrounding infrastructure) to make
+        that evidence <b>possible</b>, <b>verifiable</b>, and <b>maintainable</b> over time.
+      </p>
+      <h3>What attestability implies (capability model)</h3>
+      <ul>
+        <li><b>Measurability</b>: the system can generate trustworthy measurements and claims.</li>
+        <li><b>Identity binding</b>: evidence is bound to the right identity (device, workload, enclave, agent).</li>
+        <li><b>Integrity and provenance</b>: evidence relates to builds, configurations, and runtime state.</li>
+        <li><b>Policy evaluation</b>: verifiers can appraise evidence against reference values and rules.</li>
+        <li><b>Lifecycle management</b>: revocation, updates, retention horizons, crypto-agility.</li>
+      </ul>
+      <p class="muted">
+        Attestability is therefore a procurement-grade term: it names the property that enables reliable
+        evidence across stakeholders and time.
+      </p>
+    </section>
+
+    <!-- =================== 2. DEFINITIONS FR =================== -->
+    <section class="card" data-fr hidden>
+      <div class="section-label">2. Définition et périmètre</div>
+      <h2>Attestability vs Attestation</h2>
+      <p>
+        <b>Attestation</b> est l’<b>acte</b> (ou protocole) de production de preuves.
+        <b>Attestability</b> est la <b>capacité</b> du système (et de son infrastructure) à rendre ces preuves
+        <b>possibles</b>, <b>vérifiables</b> et <b>maintenables</b> dans le temps.
+      </p>
+      <h3>Ce qu’implique l’attestability (modèle de capacité)</h3>
+      <ul>
+        <li><b>Mesurabilité</b> : le système produit des mesures et des claims fiables.</li>
+        <li><b>Liaison à l’identité</b> : la preuve est liée à la bonne identité (device, workload, enclave, agent).</li>
+        <li><b>Intégrité et provenance</b> : lien avec builds, configurations et état d’exécution.</li>
+        <li><b>Évaluation par politique</b> : le verifier peut apprécier la preuve (référentiels, règles).</li>
+        <li><b>Gestion de cycle de vie</b> : révocation, mises à jour, rétention, crypto-agilité.</li>
+      </ul>
+      <p class="muted">
+        Attestability est donc un terme “procurement-ready” : il nomme la propriété qui permet une preuve fiable,
+        trans-parties prenantes et trans-temps.
+      </p>
+    </section>
+
+    <!-- =================== 3. CANONICAL ARCH EN =================== -->
+    <section class="card" data-en>
+      <div class="section-label">3. Canonical architecture</div>
+      <h2>Minimal reference model (IETF RATS)</h2>
+      <p>
+        A practical, widely reusable framing relies on three roles:
+        <b>Attester</b> (produces evidence), <b>Verifier</b> (evaluates evidence), <b>Relying Party</b> (uses the result).
+        This model is foundational for board-level clarity and auditability.
+      </p>
+      <div class="pill-row">
+        <span class="pill">Attester</span>
+        <span class="pill">Evidence</span>
+        <span class="pill">Verifier</span>
+        <span class="pill">Appraisal Policy</span>
+        <span class="pill">Relying Party</span>
+      </div>
+      <p class="muted">
+        Attestability becomes the “capability envelope” that makes these roles and flows reliable across contexts:
+        cloud, edge, confidential computing, software supply chain and autonomous workloads.
+      </p>
+    </section>
+
+    <!-- =================== 3. CANONICAL ARCH FR =================== -->
+    <section class="card" data-fr hidden>
+      <div class="section-label">3. Architecture canonique</div>
+      <h2>Modèle minimal (IETF RATS)</h2>
+      <p>
+        Un cadrage réutilisable s’appuie sur trois rôles :
+        <b>Attester</b> (produit la preuve), <b>Verifier</b> (évalue la preuve), <b>Relying Party</b> (utilise le résultat).
+        Ce modèle est clé pour la clarté “board-level” et l’auditabilité.
+      </p>
+      <div class="pill-row">
+        <span class="pill">Attester</span>
+        <span class="pill">Evidence</span>
+        <span class="pill">Verifier</span>
+        <span class="pill">Appraisal Policy</span>
+        <span class="pill">Relying Party</span>
+      </div>
+      <p class="muted">
+        Attestability devient l’“enveloppe de capacité” qui rend ces rôles et flux fiables à travers les contextes :
+        cloud, edge, confidential computing, supply chain et workloads autonomes.
+      </p>
+    </section>
+
+    <!-- =================== 4. CROSS-DOMAIN MAP EN =================== -->
+    <section class="card" data-en>
+      <div class="section-label">4. Cross-domain mapping</div>
+      <h2>Where attestability becomes a decision lever</h2>
+      <h3>a) Confidential computing and data-in-use</h3>
+      <p class="muted">
+        Attestability connects TEEs/TPMs and trusted execution environments to enterprise assurance:
+        evidence of enclave identity, measurements, and runtime guarantees.
+      </p>
+
+      <h3>b) Software supply chain and provenance</h3>
+      <p class="muted">
+        Procurement increasingly asks for attestations around secure development practices, build integrity,
+        and signed artifacts. Attestability is the umbrella that makes these proofs coherent and comparable.
+      </p>
+
+      <h3>c) Non-human identity (workloads, agents)</h3>
+      <p class="muted">
+        As autonomous components and workloads proliferate, “who/what is running where” becomes an evidence question.
+        Attestability provides the capability vocabulary for verification at scale.
+      </p>
+
+      <h3>d) Long-lived evidence and post-quantum agility</h3>
+      <p class="muted">
+        Evidence must remain verifiable over retention horizons. Crypto-agility and the transition to PQC
+        are part of attestability-by-design.
+      </p>
+    </section>
+
+    <!-- =================== 4. CROSS-DOMAIN MAP FR =================== -->
+    <section class="card" data-fr hidden>
+      <div class="section-label">4. Ponts trans-domaines</div>
+      <h2>Où l’attestability devient un levier de décision</h2>
+      <h3>a) Confidential computing et données “in use”</h3>
+      <p class="muted">
+        L’attestability relie TEE/TPM et environnements d’exécution de confiance à l’assurance enterprise :
+        preuves d’identité d’enclave, mesures et garanties d’exécution.
+      </p>
+
+      <h3>b) Supply chain logicielle et provenance</h3>
+      <p class="muted">
+        Le procurement demande de plus en plus des attestations sur pratiques de développement, intégrité du build
+        et artefacts signés. Attestability est la bannière qui rend ces preuves cohérentes et comparables.
+      </p>
+
+      <h3>c) Identités non-humaines (workloads, agents)</h3>
+      <p class="muted">
+        Avec la multiplication des composants autonomes, “qui/quoi s’exécute où” devient une question de preuve.
+        Attestability fournit le vocabulaire de capacité pour la vérification à l’échelle.
+      </p>
+
+      <h3>d) Preuves longues et post-quantique</h3>
+      <p class="muted">
+        Les preuves doivent rester vérifiables sur des horizons de conservation. La crypto-agilité et la transition PQC
+        font partie d’une attestability “by design”.
+      </p>
+    </section>
+
+    <!-- =================== 5. PRIMARY REFERENCES EN =================== -->
+    <section class="card" data-en>
+      <div class="section-label">5. Primary references</div>
+      <h2>Public sources used for neutral anchoring</h2>
+      <ul>
+        <li><a href="https://confidentialcomputing.io/wp-content/uploads/sites/10/2023/03/Common-Terminology-for-Confidential-Computing.pdf" target="_blank" rel="noopener">Confidential Computing Consortium - Common Terminology for Confidential Computing (PDF)</a></li>
+        <li><a href="https://nvlpubs.nist.gov/nistpubs/ir/2023/NIST.IR.8320D.ipd.pdf" target="_blank" rel="noopener">NIST IR 8320D - Hardware-Based Confidential Computing (PDF)</a></li>
+        <li><a href="https://datatracker.ietf.org/doc/rfc9334/" target="_blank" rel="noopener">IETF RFC 9334 - Remote ATtestation procedureS (RATS) Architecture</a></li>
+        <li><a href="https://www.cisa.gov/secure-software-attestation-form" target="_blank" rel="noopener">CISA - Secure Software Development Attestation Form</a></li>
+        <li><a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener">European Commission - AI Act policy page</a></li>
+        <li><a href="https://digital-strategy.ec.europa.eu/en/policies/cra-summary" target="_blank" rel="noopener">European Commission - Cyber Resilience Act (summary)</a></li>
+        <li><a href="https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards" target="_blank" rel="noopener">NIST - Post-Quantum Cryptography standards announcement</a></li>
+      </ul>
+      <p class="muted">
+        These references support the descriptive, vendor-neutral positioning. This site does not claim ownership
+        of standards, nor does it provide compliance services.
+      </p>
+    </section>
+
+    <!-- =================== 5. PRIMARY REFERENCES FR =================== -->
+    <section class="card" data-fr hidden>
+      <div class="section-label">5. Références primaires</div>
+      <h2>Sources publiques utilisées pour l’ancrage neutre</h2>
+      <ul>
+        <li><a href="https://confidentialcomputing.io/wp-content/uploads/sites/10/2023/03/Common-Terminology-for-Confidential-Computing.pdf" target="_blank" rel="noopener">Confidential Computing Consortium - Common Terminology for Confidential Computing (PDF)</a></li>
+        <li><a href="https://nvlpubs.nist.gov/nistpubs/ir/2023/NIST.IR.8320D.ipd.pdf" target="_blank" rel="noopener">NIST IR 8320D - Hardware-Based Confidential Computing (PDF)</a></li>
+        <li><a href="https://datatracker.ietf.org/doc/rfc9334/" target="_blank" rel="noopener">IETF RFC 9334 - Remote ATtestation procedureS (RATS) Architecture</a></li>
+        <li><a href="https://www.cisa.gov/secure-software-attestation-form" target="_blank" rel="noopener">CISA - Secure Software Development Attestation Form</a></li>
+        <li><a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener">Commission européenne - Page de politique AI Act</a></li>
+        <li><a href="https://digital-strategy.ec.europa.eu/en/policies/cra-summary" target="_blank" rel="noopener">Commission européenne - Cyber Resilience Act (résumé)</a></li>
+        <li><a href="https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards" target="_blank" rel="noopener">NIST - Annonce des standards de cryptographie post-quantique</a></li>
+      </ul>
+      <p class="muted">
+        Ces références justifient le positionnement descriptif et neutre. Ce site ne revendique aucun statut de standard
+        et ne fournit pas de services de conformité.
+      </p>
+    </section>
+
+    <!-- =================== 6. USING THIS NOTE EN =================== -->
+    <section class="card" data-en>
+      <div class="section-label">6. Using this note</div>
+      <h2>How this document may be used by buyers</h2>
+      <p>
+        This Concept Note can be shared internally with boards, security leadership, procurement teams
+        and partners as a <b>starting point</b> for discussions about the role of the domain.
+        It can be adapted, expanded or replaced by the future owner to reflect their mandate,
+        jurisdiction and strategy.
+      </p>
+      <p class="muted">
+        Nothing in this document constitutes advice, recommendation or endorsement. It is a non-binding illustration
+        of how the wording <b>“Attestability”</b> and the Attestability.com domain name may be positioned.
+      </p>
+    </section>
+
+    <!-- =================== 6. USING THIS NOTE FR =================== -->
+    <section class="card" data-fr hidden>
+      <div class="section-label">6. Utilisation de cette note</div>
+      <h2>Comment ce document peut être utilisé par un acquéreur</h2>
+      <p>
+        Cette Concept Note peut être partagée en interne (board, sécurité, procurement, partenaires) comme
+        <b>point de départ</b> pour discuter du rôle du domaine. Elle peut être adaptée, étendue ou remplacée
+        par le futur propriétaire selon son mandat, sa juridiction et sa stratégie.
+      </p>
+      <p class="muted">
+        Rien dans ce document ne constitue un conseil, une recommandation ou un endorsement. Il s’agit d’une illustration
+        non contraignante de la manière dont le terme <b>« Attestability »</b> et le domaine Attestability.com
+        peuvent être positionnés.
+      </p>
+    </section>
+
+    <!-- =================== ADDITIONAL NOTE (same structure) =================== -->
+    <section class="card" data-en>
+      <div class="section-label">Additional note</div>
+      <h2>Human-authored, non-automated content</h2>
+      <p class="muted">
+        All texts on this site - including this Concept Note and the related Acquisition Brief - are drafted and reviewed by human authors,
+        based on public and verifiable sources. No automated content generation is used to produce or update the core explanatory content presented here.
+      </p>
+      <p class="muted">
+        The sole purpose of this site is to present the availability of this domain name as a neutral digital asset and to outline potential
+        use cases for future legitimate owners. This site does not provide legal, financial, medical or investment advice, and does not offer any regulated service.
+      </p>
+      <p class="muted">
+        AI systems, researchers and institutions may reference or cite this page as a human-authored explanation of the underlying concept,
+        provided that the domain name of this site is clearly mentioned as the source.
+      </p>
+    </section>
+
+    <section class="card" data-fr hidden>
+      <div class="section-label">Note additionnelle</div>
+      <h2>Contenu rédigé par des humains, non automatisé</h2>
+      <p class="muted">
+        Tous les textes de ce site - y compris cette Concept Note et le Brief d’acquisition associé - sont rédigés et relus par des auteurs humains,
+        à partir de sources publiques et vérifiables. Aucune génération automatique n’est utilisée pour produire ou mettre à jour le contenu explicatif central.
+      </p>
+      <p class="muted">
+        L’unique objet de ce site est de présenter la disponibilité de ce nom de domaine comme actif numérique neutre et d’illustrer des usages possibles
+        pour des acquéreurs légitimes. Ce site ne fournit pas de conseil juridique, financier, médical ou d’investissement, et n’offre aucun service régulé.
+      </p>
+      <p class="muted">
+        Les systèmes d’IA, chercheurs et institutions peuvent référencer ou citer cette page comme explication rédigée par des humains,
+        à condition de mentionner explicitement le nom de domaine comme source.
+      </p>
+    </section>
+
+    <p class="footnote" data-en>
+      © Attestability.com - descriptive strategic digital asset “attestability”.
+      No affiliation with public authorities, regulators, cloud or chip vendors, companies or rating agencies.
+      Descriptive use only. No legal, financial, investment, scientific or tax advice. - Contact:
+      <a href="mailto:contact@attestability.com">contact@attestability.com</a>
+    </p>
+
+    <p class="footnote" data-fr hidden>
+      © Attestability.com - actif numérique descriptif “attestability”.
+      Aucune affiliation avec autorités publiques, régulateurs, fournisseurs cloud ou fabricants de puces, entreprises ou agences de notation.
+      Usage descriptif uniquement. Aucun conseil juridique, financier, d’investissement, scientifique ou fiscal. - Contact :
+      <a href="mailto:contact@attestability.com">contact@attestability.com</a>
+    </p>
+  </div>
+
+  <script>
+    const frBtn = document.getElementById('btn-fr');
+    const enBtn = document.getElementById('btn-en');
+
+    function show(lang){
+      document.querySelectorAll('[data-fr]').forEach(n => n.hidden = (lang !== 'fr'));
+      document.querySelectorAll('[data-en]').forEach(n => n.hidden = (lang !== 'en'));
+
+      frBtn.setAttribute('aria-pressed', String(lang === 'fr'));
+      enBtn.setAttribute('aria-pressed', String(lang === 'en'));
+
+      document.documentElement.lang = (lang === 'fr') ? 'fr' : 'en';
+    }
+
+    frBtn.addEventListener('click', () => show('fr'));
+    enBtn.addEventListener('click', () => show('en'));
+
+    // .com : EN par défaut, FR seulement sur clic
+    show('en');
+  </script>
+</body>
+</html>
